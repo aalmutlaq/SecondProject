@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+
+    <script src="//apis.google.com/js/platform.js?onload=start">
+    </script>
+
+    <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+
+</head>
+
+
+<body>
+
+
+    <!-- GOOGLE PLUS SIGN IN BUTTON-->
+
+
+    <div id="signinButton">
+        <span class="g-signin" data-scope="openid email" data-clientid="729783714861-ahmrbkbepscv93bki3j4oh2a7a9ss3qb.apps.googleusercontent.com" data-redirecturi="postmessage" data-accesstype="offline" data-cookiepolicy="single_host_origin" data-callback="signInCallback"
+            data-approvalprompt="force">
+          </span>
+    </div>
+
+    <div id="result"></div>
+
+
+
+
+    <!--END GOOGLE PLUS SIGN IN BUTTON -->
+
+    <script>
+        function signInCallback(authResult) {
+            if (authResult['code']) {
+                $('#signinButton').attr('style', 'display: none')
+                $.ajax({
+                    type: 'POST',
+                    url: "/gconnect?state={{state}}",
+                    processData: false,
+                    contentType: 'application/octet-stream; charset=utf-8',
+                    data: authResult['code'],
+                    success: function(result) {
+                        if (result) {
+                            $('#result').html('Login Successful</br>' + result + '</br>Redirecting...')
+                            setTimeout(function() {
+                                window.location.href = "{{ url_for('showAllCompany') }}";
+                            }, 4000)
+                        }
+                    }
+                })
+            } else if (authResult['error']) {
+                console.log('There was an error: ' + authResult['error'])
+            } else {
+                $("#result").html('Failed to make a server call. Check your configuration and console.')
+            }
+        }
+    </script>
+
+</body>
+
+</html>

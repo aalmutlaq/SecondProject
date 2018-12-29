@@ -1,0 +1,166 @@
+.button1 {
+    background-color: white; 
+      color: black; 
+      border: 2px solid #f44336; /* Green */
+}
+
+.button2 {
+    background-color: white; 
+      color: black; 
+      border: 2px solid #4CAF50; /* Green */
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: darkred;
+}
+
+
+/* Logo */
+#logo {
+    padding: 0;
+    width: auto;
+    float: left;
+}
+
+#logo h1 a,
+h1 a:hover {
+    color: darkred;
+    text-decoration: none;
+}
+
+#logo h1 span {
+    color: #f8dbdb;
+}
+
+
+#header-inner {
+    margin: 0 auto;
+    padding: 0;
+    width: 970px;
+}
+
+/* Feature */
+.feature {
+    background: rgb(99, 96, 96);
+    padding: 18px;
+}
+
+.feature-inner {
+    margin: auto;
+    width: 970px;
+}
+
+.feature-inner h1 {
+    color: #f8dbdb;
+    font-size: 32px;
+}
+
+/* Menu */
+#top-nav {
+    margin: 0 auto;
+    padding: 0px 0 0;
+    height: 37px;
+    float: right;
+}
+
+#top-nav ul {
+    list-style: none;
+    padding: 0;
+    height: 37px;
+    float: left;
+}
+
+
+#top-nav ul li a {
+    display: block;
+    margin: 0;
+    padding: 8px 20px;
+    color: rgb(99, 96, 96);
+    text-decoration: none;
+}
+
+/* Content */
+#content-inner {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 970px;
+    background: #fff;
+}
+
+#content #contentbar {
+    margin: 0;
+    padding: 0;
+    float: right;
+    width: 760px;
+}
+
+
+#content #sidebar .widget {
+    margin: 0 0 12px;
+    padding: 10px 10px 10px 13px;
+    line-height: 1.4em;
+}
+
+
+#content #sidebar .widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #959595;
+}
+
+
+#content #sidebar .widget ul li a {
+    color: rgb(99, 96, 96);
+    text-decoration: none;
+    margin-left: -16px;
+    padding: 4px 8px 4px 16px;
+}
+
+#content #sidebar .widget ul li a:hover {
+    color: #f8dbdb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Footerblurb */
+#footerblurb {
+    background: #f8dbdb;
+    color: rgb(99, 96, 96);
+}
+
+#footerblurb-inner {
+    margin: 0 auto;
+    width: 922px;
+    padding: 24px;
+}
+
+
+/* Footer */
+#footer {
+    background: #fff;
+}
+
+#footer-inner {
+    margin: auto;
+    text-align: center;
+    padding: 12px;
+    width: 922px;
+}
+
+
+/* Clear both sides to assist with div alignment  */
+.clr {
+    clear: both;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 0px;
+    line-height: 0px;
+}
